@@ -24,39 +24,6 @@ Prerequisites
 Python 3.8+
 pip package manager
 
-
-Create a virtual environment
-
-bashCopypython -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
-Install dependencies
-
-bashCopypip install -r requirements.txt
-🔍 Project Structure
-Copymedbuddy/
-│
-├── data/
-│   └── medical_dataset.csv
-│
-├── models/
-│   └── symptom_checker.pkl
-│
-├── src/
-│   ├── data_preprocessing.py
-│   ├── model_training.py
-│   └── symptom_checker.py
-│
-├── notebooks/
-│   └── exploratory_analysis.ipynb
-│
-├── tests/
-│   └── test_model.py
-│
-├── requirements.txt
-└── README.md
-📊 Model Performance
-
 Accuracy: To be determined with cross-validation
 Potential Improvements:
 
