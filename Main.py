@@ -12,15 +12,15 @@ from PIL import Image
 
 st.set_page_config(page_title="MedBuddy AI Medical Advisor", page_icon="🩺")
 
-st.markdown("""
+st.markdown(
 <style>
     .stButton button {
-        background-color: #FF4B4B;
+        background-color: 
         color: white;
         font-weight: bold;
     }
     .stTextInput input {
-        background-color: #F0F2F6;
+        background-color:#F0F2F6;
     }
     .stMarkdown h1 {
         color: #FF4B4B;
@@ -29,7 +29,7 @@ st.markdown("""
         color: #FF4B4B;
     }
 </style>
-""", unsafe_allow_html=True)
+, unsafe_allow_html=True)
 
 le = LabelEncoder()
 
@@ -114,7 +114,7 @@ def load_data():
 
 
 def preprocess_data(symptoms_data):
-    """Preprocess the dataset for model training."""
+    
     if "Disease" not in symptoms_data.columns:
         st.error("'Disease' column not found in the dataset")
         return None, None
@@ -251,7 +251,7 @@ def predict_disease(symptoms, model, feature_names):
         return None
 
 def get_disease_info(disease):
-    """Get information about a disease."""
+    
     disease_info = {
         "Fungal infection": "A fungal infection is a condition caused by fungal growth on or in the body. Treat with antifungal medications. Keep the affected area clean and dry.",
         "Allergy": "An allergy is an immune system response to a foreign substance. Avoid allergens and take antihistamines as needed.",
@@ -266,7 +266,7 @@ def get_disease_info(disease):
     return disease_info.get(disease, default_info)
 
 def health_chatbot(query):
-    """Enhanced rule-based health chatbot."""
+    
     health_info = {
         "cold": "Common cold symptoms include runny nose, sore throat, cough, and mild fever. Rest, fluids, and over-the-counter medications can help. See a doctor if symptoms persist beyond 10 days.",
         "flu": "Flu symptoms include high fever, body aches, fatigue, and cough. Rest, fluids, and antiviral medications (if prescribed early) can help. Seek medical attention for severe symptoms.",
@@ -297,7 +297,7 @@ def health_chatbot(query):
     return "I don't have specific information on that health topic. For medical advice, please consult a healthcare professional."
 
 def medicine_reminder_ui():
-    """User interface for medicine reminders."""
+   
     st.header("⏰ Medicine Reminder")
     
     with st.form("reminder_form"):
